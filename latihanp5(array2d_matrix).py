@@ -34,28 +34,37 @@ while True:
     C = []
 
     if pilih == "1":
+        print("\n--- Proses Penjumlahan ---")
         for i in range(baris):
             baris_c = []
             for j in range(kolom):
-                baris_c.append(A[i][j] + B[i][j])
+                hasil = A[i][j] + B[i][j]
+                print(f"  A[{i}][{j}] + B[{i}][{j}] = {A[i][j]} + {B[i][j]} = {hasil}")
+                baris_c.append(hasil)
             C.append(baris_c)
         print("\nHasil Penjumlahan:")
 
     elif pilih == "2":
+        print("\n--- Proses Pengurangan ---")
         for i in range(baris):
             baris_c = []
             for j in range(kolom):
-                baris_c.append(A[i][j] - B[i][j])
+                hasil = A[i][j] - B[i][j]
+                print(f"  A[{i}][{j}] - B[{i}][{j}] = {A[i][j]} - {B[i][j]} = {hasil}")
+                baris_c.append(hasil)
             C.append(baris_c)
         print("\nHasil Pengurangan:")
 
     elif pilih == "3":
+        print("\n--- Proses Perkalian ---")
         for i in range(baris):
             baris_c = []
             for j in range(baris):
                 total = 0
                 for k in range(kolom):
+                    print(f"  A[{i}][{k}] * B[{k}][{j}] = {A[i][k]} * {B[k][j]} = {A[i][k] * B[k][j]}")
                     total += A[i][k] * B[k][j]
+                print(f"  Total C[{i}][{j}] = {total}")
                 baris_c.append(total)
             C.append(baris_c)
         print("\nHasil Perkalian:")
